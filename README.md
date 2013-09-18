@@ -68,6 +68,21 @@ console.log(myClassA.goodbye()); // Cya!
 console.log(myClassB.goodbye()); // Cya!
 ```
 
+Define object properties on the prototype?
+
+```javascript
+var Person = Model.extend();
+
+Person.def('name', {
+	get: function() { return this.get('name'); },
+	set: function(value) { return this.set('name', value); },
+});
+
+var rob = new Person();
+rob.name = "Robert";
+console.log(rob.name); // Robert
+```
+
 TODO
 ----
 * Documentation
