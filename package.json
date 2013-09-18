@@ -1,7 +1,7 @@
 {
   "name": "constructor",
   "version": "0.0.0",
-  "description": "Single inheritance for javascript.",
+  "description": "Single inheritance for Javascript.",
   "main": "src/constructor.js",
   "directories": {
     "test": "test"
@@ -23,5 +23,9 @@
   "author": "Chris Pearce (hello@chrispearce.me)",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "da7802c29020b126099d82d102c9f5cbe356b352"
+  "gitHead": "da7802c29020b126099d82d102c9f5cbe356b352",
+  "devDependencies": {
+    "intern": "~1.2.1",
+    "grunt": "~0.4.1"
+  }
 }
