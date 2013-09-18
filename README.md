@@ -3,7 +3,7 @@ Constructor
 
 Simple single inheritance pattern boilerplate for Javascript with zero dependencies.
 
-*Note: Readme will be updated soon with much better explanation and examples.*
+*Note: Readme will be updated soon with much better explanation and examples. See TODO section at bottom.*
 
 Quick and dirty example
 -----------------------

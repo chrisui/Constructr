@@ -1,0 +1,27 @@
+{
+  "name": "constructor",
+  "version": "0.0.0",
+  "description": "Single inheritance for javascript.",
+  "main": "src/constructor.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Chrisui/constructor.git"
+  },
+  "keywords": [
+    "single",
+    "inheritance",
+    "javascript",
+    "class",
+    "constructor"
+  ],
+  "author": "Chris Pearce (hello@chrispearce.me)",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "da7802c29020b126099d82d102c9f5cbe356b352"
+}

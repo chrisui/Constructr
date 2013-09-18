@@ -42,9 +42,6 @@
 		// Child will always call the parents constructor
 		var child = function(){ parent.apply(this, arguments); };
 
-		// Inherit static properties from parent.
-		extendObj(child, parent);
-
 		// Inherit prototype properties from parent
 		// Set the prototype chain to inherit without calling parent's constructor function.
 		ctor.prototype = parent.prototype;
@@ -61,15 +58,19 @@
 
 		// Set a convenience property in case the parent's prototype is needed later.
 		child.__super__ = parent.prototype;
+		// Always have the static 'extend' method on constructors
+		child.extend = parent.extend;
+		// Ensure the mixes method is always copied
+		child.mixes = parent.mixes;
+		// Ensure the def method is always copied
+		child.def = parent.def;
 
 		return child;
 	};
 
 	// Create a new constructor from this prototype
 	Constructor.extend = function(protoProps, staticProps) {
-		var child = inherits(this, protoProps, staticProps);
-
-		return child;
+		return inherits(this, protoProps, staticProps);
 	};
 
 	// Mix in an objects properties to this constructor's prototype
@@ -82,6 +83,28 @@
 		}
 
 		return this;
+	};
+
+	// Define a property on this constructor prototype (nicer shortcut to Object.defineProperty)
+	// or staticly on the constructor if true is passed for isStatic
+	Constructor.def = function(property, definition, isStatic) {
+		// If property is an object use defineProperties
+		if (property === Object(property)) {
+			definition = property;
+			isStatic = definition;
+
+			if (isStatic)
+				Object.defineProperties(this, definition);
+			else
+				Object.defineProperties(this.prototype, definition);
+
+			return;
+		}
+
+		if (isStatic)
+			Object.defineProperty(this, property, definition);
+		else
+			Object.defineProperty(this.prototype, property, definition);
 	};
 
 	// Finally expose our public Constructor
