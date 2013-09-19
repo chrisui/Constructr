@@ -23,7 +23,7 @@
   "author": "Chris Pearce (hello@chrispearce.me)",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "da7802c29020b126099d82d102c9f5cbe356b352",
+  "gitHead": "5cb93287c989860e05fe4d8391b4afd5d0de4d7a",
   "devDependencies": {
     "intern": "~1.2.1",
     "grunt": "~0.4.1"
