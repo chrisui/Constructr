@@ -72,6 +72,11 @@
 	Constructor.extend = function(protoProps, staticProps) {
 		return inherits(this, protoProps, staticProps);
 	};
+	
+	// Create a new constructor inheriting from given constructor
+	Constructor.extendFrom = function(extendFrom, protoProps, staticProps) {
+		return inherits(extendFrom, protoProps, staticProps);
+	};
 
 	// Mix in an objects properties to this constructor's prototype
 	Constructor.mixes = function() {
