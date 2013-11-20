@@ -1,6 +1,6 @@
 {
   "name": "constructor",
-  "version": "0.9.0",
+  "version": "0.1.0",
   "description": "Single inheritance for Javascript.",
   "main": "src/constructor.js",
   "directories": {
