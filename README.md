@@ -1,6 +1,7 @@
-Constructr
+Constructr [![Build Status](https://travis-ci.org/Chrisui/Constructr.svg?branch=0.2.0)](https://travis-ci.org/Chrisui/Constructr)
 ===========
-[![Build Status](https://travis-ci.org/Chrisui/Constructr.svg?branch=0.2.0)](https://travis-ci.org/Chrisui/Constructr)
+
+
 Simple inheritance boilerplate for Javascript with zero dependencies and some spice on top.
 
 *Note: Readme will be updated soon with much better explanation and examples. See TODO section at bottom.*
