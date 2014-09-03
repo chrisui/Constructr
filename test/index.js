@@ -110,6 +110,26 @@ describe('Constructr', function() {
 
     });
 
+    describe('#extendWithConstructor()', function() {
+
+        it ('Should correctly setup inheritance chain (inherit from both constructor and original construct)', function() {
+            var MyMutableTestConstructor = function() {};
+            var InheritFrom = Constructr.extend();
+            var MyConstruct = InheritFrom.extendWithConstructor(MyMutableTestConstructor);
+
+            expect(new MyConstruct).to.be.instanceOf(MyMutableTestConstructor);
+            expect(new MyConstruct).to.be.instanceOf(InheritFrom);
+        });
+
+        it ('should correctly setup construct on prototype', function () {
+            var MyMutableTestConstructor = function() {};
+            var MyConstruct = Constructr.extendWithConstructor(MyMutableTestConstructor);
+
+            expect((new MyConstruct()).constructor).to.equal(MyMutableTestConstructor);
+        })
+
+    });
+
     describe('#mixes()', function() {
 
         it ('should correctly inherit properties', function() {

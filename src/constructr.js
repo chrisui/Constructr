@@ -61,9 +61,10 @@ var inherits = function(child, parent, protoProps, staticProps) {
     child.__super__ = parent.prototype;
 
     // Copy references to static methods we want to extend
-    child.extend = parent.extend;
-    child.mixes = parent.mixes;
-    child.def = parent.def;
+    child.extendWithConstructor = Constructr.extendWithConstructor;
+    child.extend = Constructr.extend;
+    child.mixes = Constructr.mixes;
+    child.def = Constructr.def;
 
     return child;
 };
@@ -92,6 +93,17 @@ Constructr.extend = function(protoProps, staticProps) {
  */
 Constructr.extendFrom = function(extendFrom, protoProps, staticProps) {
     return inherits(function(){ extendFrom.apply(this, arguments); }, extendFrom, protoProps, staticProps);
+};
+
+/**
+ * Extends the current constructor but uses given constructor function
+ * @param {Object} [protoProps]
+ * @param {Object} [staticProps]
+ * @param constructFrom
+ * @returns {Constructr}
+ */
+Constructr.extendWithConstructor = function(constructFrom, protoProps, staticProps) {
+    return inherits(constructFrom, this, protoProps, staticProps);
 };
 
 /**
