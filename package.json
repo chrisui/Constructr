@@ -1,6 +1,6 @@
 {
   "name": "constructr",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Inheritance (with spice) for Javascript in node or the browser.",
   "main": "src/constructr.js",
   "scripts": {
