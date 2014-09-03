@@ -4,6 +4,12 @@ Simple inheritance boilerplate for Javascript with zero dependencies and some sp
 
 *Note: Readme will be updated soon with much better explanation and examples. See TODO section at bottom.*
 
+Installation & Usage
+--------------------
+```npm install constructr```
+
+For now you can just use browserify for the browser (will be sorting UMD packaging v. soon)
+
 Quick and dirty example
 -----------------------
 

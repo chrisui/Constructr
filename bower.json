@@ -1,5 +1,22 @@
 {
   "name": "constructr",
-  "version": "0.1.0",
-  "main": "src/constructr.js"
+  "version": "0.2.0",
+  "main": "src/constructr.js",
+  "homepage": "https://github.com/Chrisui/Constructr",
+  "authors": [
+    "Chris Pearce <hello@chrispearce.me>"
+  ],
+  "description": "Simple javascript inheritance with some spice",
+  "keywords": [
+    "inheritance",
+    "constructor"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
