@@ -1,7 +1,6 @@
-Constructor
+Constructr
 ===========
-
-Simple single inheritance pattern boilerplate for Javascript with zero dependencies.
+Simple inheritance boilerplate for Javascript with zero dependencies and some spice on top.
 
 *Note: Readme will be updated soon with much better explanation and examples. See TODO section at bottom.*
 
@@ -9,7 +8,7 @@ Quick and dirty example
 -----------------------
 
 ```javascript
-var BaseClass = Constructor.extend({
+var BaseClass = Constructr.extend({
 	day: 'Monday',
 	initialize: function(day) {
 		this.day = day || this.day;
@@ -37,7 +36,7 @@ console.log(myClassB.hello('Chris')); // Hello Chris. It's Friday!
 And of course you don't have to pass one big object to extend the prototype with all your methods.
 
 ```javascript
-var BaseClass = Constructor.extend({
+var BaseClass = Constructr.extend({
 	day: 'Monday'
 });
 
@@ -50,7 +49,7 @@ BaseClass.prototype.hello = function(text) {
 };
 ```
 
-Want to reuse common collections of methods? Ie. Group functionality in a single inheritance pattern horizontally.
+Want to reuse common collections of methods? Ie. Horizontal inheritance?
 
 ```javascript
 var commonMethods = {
@@ -71,7 +70,7 @@ console.log(myClassB.goodbye()); // Cya!
 Define object properties on the prototype?
 
 ```javascript
-var Person = Model.extend();
+var Person = Constructr.extend();
 
 Person.def('name', {
 	get: function() { return this.get('name'); },
@@ -87,5 +86,4 @@ TODO
 ----
 * Documentation
 * Better introduction, explanation and examples.
-* Tests
 * Example how it can be used in existing libraries (Eg. Backbone)

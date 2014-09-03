@@ -1,31 +1,29 @@
 {
-  "name": "constructor",
+  "name": "constructr",
   "version": "0.1.0",
-  "description": "Single inheritance for Javascript.",
-  "main": "src/constructor.js",
-  "directories": {
-    "test": "test"
-  },
+  "description": "Inheritance (with spice) for Javascript in node or the browser.",
+  "main": "src/constructr.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Chrisui/constructor.git"
+    "url": "git://github.com/Chrisui/constructr.git"
   },
   "keywords": [
-    "single",
     "inheritance",
-    "javascript",
     "class",
     "constructor"
   ],
   "author": "Chris Pearce (hello@chrispearce.me)",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "5cb93287c989860e05fe4d8391b4afd5d0de4d7a",
   "devDependencies": {
-    "intern": "~1.2.1",
-    "grunt": "~0.4.1"
+    "mocha": "~1.21.4",
+    "sinon": "~1.10.3",
+    "chai": "~1.9.1"
+  },
+  "dependencies": {
+    "chai": "~1.9.1"
   }
 }
